@@ -14,11 +14,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>MusicApp</title>
     <link href="site.css" rel="stylesheet" type="text/css" />
-    <jsp:useBean id="data" class="me.ntab.core.DataProvider" scope="session" />
+    <jsp:useBean id="data" class="me.ntab.music.AlbumsDataProvider" scope="session" />
   </head>
   <body>
     <div class="widerow" style="padding: 12px 0">
       <div class="column title">Альбомы</div>
+      <div class="column">
+        <button class="button right" onclick="window.location='addalbum.jsp';">
+          Добавить альбом
+        </button>
+      </div>
     </div>
     <div class="widerow" style="padding: 12px 0">
       <div class="column w40 wideheader">Альбом</div>
@@ -26,7 +31,7 @@
       <div class="column w20 tcenter wideheader">Год</div>
     </div>
     <c:forEach items="${data.getAlbumList()}" var="item">
-      <div class="widerow" style="padding: 12px 0">
+      <div class="widerow" style="padding: 8px 0">
         <div class="column w40">
             <a href="album.jsp?id=${item.getAlbumId()}">${item.getTitle()}</a>
         </div>

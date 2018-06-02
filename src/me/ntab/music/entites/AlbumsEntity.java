@@ -1,4 +1,4 @@
-package me.ntab.core;
+package me.ntab.music.entites;
 
 import javax.persistence.*;
 import java.util.*;
@@ -103,7 +103,22 @@ public class AlbumsEntity {
 
     public List<SongsEntity> orderedSongs() {
         return songs.stream()
-                .sorted(Comparator.comparingInt(SongsEntity::getTrackNum).thenComparing(SongsEntity::getTitle))
+                .sorted((o1, o2) -> {
+                    if (o1.getTrackNum() == null && o2.getTrackNum() != null) {
+                        return 1;
+                    }
+                    if (o1.getTrackNum() != null && o2.getTrackNum() == null) {
+                        return -1;
+                    }
+                    int result = 0;
+                    if (o1.getTrackNum() != null) {
+                        result = o1.getTrackNum().compareTo(o2.getTrackNum());
+                    }
+                    if (result == 0) {
+                        result = o1.getTitle().compareTo(o2.getTitle());
+                    }
+                    return result;
+                })
                 .collect(Collectors.toList());
     }
 

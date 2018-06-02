@@ -3,4 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <servlet>
+        <servlet-name>NewAlbumServlet</servlet-name>
+        <servlet-class>me.ntab.music.NewAlbumServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NewSongServlet</servlet-name>
+        <servlet-class>me.ntab.music.NewSongServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewAlbumServlet</servlet-name>
+        <url-pattern>/newalbum</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewSongServlet</servlet-name>
+        <url-pattern>/newsong</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -8,9 +8,9 @@
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.username">user</property>
         <property name="connection.password">1Qwerty2</property>
-        <mapping class="me.ntab.core.AlbumsEntity"/>
-        <mapping class="me.ntab.core.ArtistsEntity"/>
-        <mapping class="me.ntab.core.SongsEntity"/>
+        <mapping class="me.ntab.music.entites.AlbumsEntity"/>
+        <mapping class="me.ntab.music.entites.ArtistsEntity"/>
+        <mapping class="me.ntab.music.entites.SongsEntity"/>
 
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">update</property> -->

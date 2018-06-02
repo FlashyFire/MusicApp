@@ -1,4 +1,4 @@
-package me.ntab.core;
+package me.ntab.music.entites;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -89,6 +89,7 @@ public class SongsEntity {
     }
 
     public String durationString() {
+        if (duration == null) { return ""; }
         return String.format("%1$d:%2$02d", duration / 60, duration % 60);
     }
 

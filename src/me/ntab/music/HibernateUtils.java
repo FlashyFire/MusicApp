@@ -1,4 +1,4 @@
-package me.ntab.core;
+package me.ntab.music;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Metamodel;

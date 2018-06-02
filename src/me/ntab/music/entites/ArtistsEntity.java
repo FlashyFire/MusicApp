@@ -1,4 +1,4 @@
-package me.ntab.core;
+package me.ntab.music.entites;
 
 import javax.persistence.*;
 import java.util.HashSet;
